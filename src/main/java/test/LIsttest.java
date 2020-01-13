@@ -45,6 +45,7 @@ public class LIsttest {
             System.out.println(map2.get(integer));
             System.out.println("\n");
         }
+        System.out.println("okkkkk");
     }
 
     public static Map<Integer,TestPeople> getmap(Map<Integer,TestPeople> map) {
@@ -60,7 +61,6 @@ public class LIsttest {
             }
         }
         return map;
-//        Map<Integer,TestPeople> map2 = change(map);
     }
 
     public static Map<Integer,TestPeople> change(Map<Integer,TestPeople> map){
