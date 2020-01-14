@@ -5,10 +5,7 @@ import com.alibaba.fastjson.TypeReference;
 
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 /**
  * @Author: yangshushan
@@ -16,13 +13,22 @@ import java.util.List;
  */
 public class jsontest {
     public static void main(String[] args) {
-        String utime = String.valueOf(LocalDate.now().minusDays(1));
-        System.out.println(utime);
-        System.out.printf(getYesterday());
+//        String utime = String.valueOf(LocalDate.now().minusDays(1));
+//        System.out.println(utime);
+//        System.out.printf(getYesterday());
 //        String str = "http://example.com/some/cool/可以page";
 //        String json = JSON.toJSONString(str);
 //        String res = JSON.parseObject(json,String.class);
 //        System.out.println(json);
+        HashSet hashSet = new HashSet(JSON.parseArray("[1,2,3]",String.class));
+        hashSet.add(null);
+        System.out.println(hashSet.size());
+        HashSet set = new HashSet();
+        System.out.println(set.isEmpty());
+//        System.out.println(JSON.parseArray(null,String.class));
+//        for (Object o : hashSet) {
+//            System.out.println(o);
+//        }
     }
 
     public static String getYesterday() {
